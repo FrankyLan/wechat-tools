@@ -1,0 +1,60 @@
+<?php
+require('creatmenu.php');
+$data = '{
+     "button":[
+      {
+           "name":"奶粉查价",
+           "sub_button":[
+             {
+               "name":"奶粉查价",
+               "type":"view",
+              "url":""
+             },
+             {
+             "name":"组团砍价",
+             "type":"view",
+             "url":""
+           }
+             ]
+       },
+	   {
+           "name":"福利专区",
+           "sub_button":[
+           {
+         "name":"降价提醒",
+          "type":"view",
+          "url":""
+        },
+             {
+             "name":"奶粉验真",
+              "type":"click",
+              "key":"奶粉验真"
+              }
+            ]
+          },
+          {
+               "name":"我的",
+                "sub_button":[
+                  {
+                  "name":"免费入会",
+                  "type":"view",
+                  "url":""
+                },
+                {
+                  "name":"个人中心",
+                  "type":"view",
+                  "url":""
+                },
+                {
+                  "name":"找茬有礼",
+                  "type":"view",
+                  "url":""
+                }
+                ]
+}]
+
+ }';
+$menu=new Menu();
+$access_token=$menu->GetToken();
+echo $menu->createMenu($data,$access_token);
+?>
